@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img">
+  <style>
+    .ln{fill:none;stroke:#1a1a1a;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .sun-rays{transform-origin:440px 120px;animation:spin 60s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .scarf{transform-origin:260px 295px;animation:flutter 3.5s ease-in-out infinite alternate}
+    @keyframes flutter{
+      from{transform:rotate(-4deg) skewX(-2deg)}
+      to{transform:rotate(4deg) skewX(2deg) translateY(-3px)}
+    }
+    @media(prefers-reduced-motion:reduce){.sun-rays,.scarf{animation:none}}
+  </style>
+
+  <!-- 太阳 -->
+  <circle class="ln" cx="440" cy="120" r="55"/>
+  <g class="sun-rays">
+    <path class="ln" d="M440 50 V30"/>
+    <path class="ln" d="M440 190 V210"/>
+    <path class="ln" d="M370 120 H350"/>
+    <path class="ln" d="M510 120 H530"/>
+    <path class="ln" d="M391 71 L377 57"/>
+    <path class="ln" d="M489 71 L503 57"/>
+    <path class="ln" d="M391 169 L377 183"/>
+    <path class="ln" d="M489 169 L503 183"/>
+  </g>
+
+  <!-- 云 -->
+  <path class="ln" d="M570 95 C 560 95, 554 105, 558 115 C 550 120, 555 135, 570 133 C 575 142, 595 142, 600 133 C 618 135, 620 115, 608 112 C 610 100, 598 92, 586 95 C 578 88, 566 88, 570 95 Z"/>
+
+  <!-- 地平线/地面 -->
+  <path class="ln" d="M0 420 L 800 420"/>
+  <path class="ln" d="M60 420 L 62 408"/>
+  <path class="ln" d="M75 420 L 73 410"/>
+  <path class="ln" d="M640 420 L 642 408"/>
+  <path class="ln" d="M655 420 L 653 410"/>
+  <path class="ln" d="M720 420 L 722 412"/>
+  <path class="ln" d="M735 420 L 733 410"/>
+
+  <!-- 小王子 -->
+  <!-- 头发：锯齿/尖刺状（参考画里是连起来的 zigzag） -->
+  <path class="ln" d="M240 280 L252 258 L258 278 L268 254 L276 276 L286 256 L294 280 L306 260 L310 282"/>
+  <!-- 头（圆） -->
+  <circle class="ln" cx="275" cy="282" r="32"/>
+  <!-- 身体：梯形 -->
+  <path class="ln" d="M244 314 L238 400 L312 400 L306 314"/>
+  <!-- 腰带 -->
+  <path class="ln" d="M242 350 L308 350"/>
+
+  <!-- 围巾：绕脖子一圈 + 长飘带向左飞 -->
+  <g class="scarf">
+    <path class="ln" d="M244 314 C 236 318, 226 310, 228 300 C 230 290, 248 288, 258 294"/>
+    <path class="ln" d="M228 300 C 190 330, 120 380, 60 415"/>
+  </g>
+
+  <!-- 盘腿坐地（从身体底部延伸到地面再绕回来） -->
+  <path class="ln" d="M238 400 C 216 408, 186 412, 160 416"/>
+  <path class="ln" d="M312 400 C 330 408, 356 412, 380 416"/>
+
+  <!-- 玫瑰 -->
+  <path class="ln" d="M395 420 L 395 360"/>
+  <path class="ln" d="M395 388 C 382 384, 372 386, 366 396"/>
+  <circle class="ln" cx="395" cy="355" r="14"/>
+  <path class="ln" d="M385 348 C 390 340, 400 340, 405 348"/>
+  <path class="ln" d="M402 352 C 410 349, 414 355, 408 362"/>
+  <path class="ln" d="M388 358 C 382 365, 388 370, 395 365"/>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img">
+  <style>
+    .ln{fill:none;stroke:#1a1a1a;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .sun-rays{transform-origin:440px 120px;animation:spin 60s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .rose{transform-origin:120px 420px;animation:swing 4s ease-in-out infinite alternate}
+    @keyframes swing{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+    @media(prefers-reduced-motion:reduce){.sun-rays,.rose{animation:none}}
+  </style>
+
+  <!-- 太阳 -->
+  <circle class="ln" cx="440" cy="120" r="55"/>
+  <g class="sun-rays">
+    <path class="ln" d="M440 50 V30"/>
+    <path class="ln" d="M440 190 V210"/>
+    <path class="ln" d="M370 120 H350"/>
+    <path class="ln" d="M510 120 H530"/>
+    <path class="ln" d="M391 71 L377 57"/>
+    <path class="ln" d="M489 71 L503 57"/>
+    <path class="ln" d="M391 169 L377 183"/>
+    <path class="ln" d="M489 169 L503 183"/>
+  </g>
+
+  <!-- 云 -->
+  <path class="ln" d="M570 95 C 560 95, 554 105, 558 115 C 550 120, 555 135, 570 133 C 575 142, 595 142, 600 133 C 618 135, 620 115, 608 112 C 610 100, 598 92, 586 95 C 578 88, 566 88, 570 95 Z"/>
+
+  <!-- 地平线/地面 -->
+  <path class="ln" d="M0 420 L 800 420"/>
+  <path class="ln" d="M60 420 L 62 408"/>
+  <path class="ln" d="M75 420 L 73 410"/>
+  <path class="ln" d="M640 420 L 642 408"/>
+  <path class="ln" d="M655 420 L 653 410"/>
+  <path class="ln" d="M720 420 L 722 412"/>
+  <path class="ln" d="M735 420 L 733 410"/>
+
+  <!-- 左下角玫瑰：微微摇摆 -->
+  <g class="rose">
+    <path class="ln" d="M120 420 L 120 360"/>
+    <path class="ln" d="M120 388 C 108 384, 100 386, 96 396"/>
+    <path class="ln" d="M120 380 C 132 376, 140 378, 144 388"/>
+    <circle class="ln" cx="120" cy="355" r="14"/>
+    <path class="ln" d="M110 348 C 116 340, 124 340, 130 348"/>
+    <path class="ln" d="M128 352 C 136 349, 140 355, 134 362"/>
+    <path class="ln" d="M112 358 C 106 365, 112 370, 120 365"/>
+  </g>
+</svg>

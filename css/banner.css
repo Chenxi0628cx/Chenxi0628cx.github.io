@@ -1,0 +1,37 @@
+/* 仅在首页横幅显示简笔画，body 白底不晕 */
+body { background: #fff !important; }
+
+/* 首页横幅：白纸底 + 简笔画 */
+#page-header.full_page {
+  background-image: none !important;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#page-header.full_page::before {
+  background: transparent !important;
+}
+
+#page-header.full_page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/img/scene.svg') center center / contain no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 浅底深字 */
+#page-header.full_page #site-title { color: #161616; text-shadow: none; }
+#page-header.full_page #site-subtitle { color: #555; text-shadow: none; }
+#page-header.full_page:not(.nav-fixed) .nav-site-title { color: #161616; }
+#page-header.full_page #scroll-down i { color: #161616; }
+
+/* 暗色模式 */
+html[data-theme='dark'] body { background: #121212 !important; }
+html[data-theme='dark'] #page-header.full_page { background-color: #121212; }
+html[data-theme='dark'] #page-header.full_page::after { filter: invert(1) brightness(0.92); }
+html[data-theme='dark'] #page-header.full_page #site-title,
+html[data-theme='dark'] #page-header.full_page:not(.nav-fixed) .nav-site-title { color: #f2f2f2; }
+html[data-theme='dark'] #page-header.full_page #site-subtitle { color: #bdbdbd; }
+html[data-theme='dark'] #page-header.full_page #scroll-down i { color: #f2f2f2; }
