@@ -35,3 +35,9 @@ html[data-theme='dark'] #page-header.full_page #site-title,
 html[data-theme='dark'] #page-header.full_page:not(.nav-fixed) .nav-site-title { color: #f2f2f2; }
 html[data-theme='dark'] #page-header.full_page #site-subtitle { color: #bdbdbd; }
 html[data-theme='dark'] #page-header.full_page #scroll-down i { color: #f2f2f2; }
+
+/* 正文段落首行缩进两格（引用、列表内不缩进） */
+#article-container > p,
+#article-container > div > p {
+  text-indent: 2em;
+}
